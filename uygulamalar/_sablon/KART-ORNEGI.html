@@ -1,0 +1,29 @@
+<!--
+  UYGULAMA KARTI ÖRNEĞİ
+  1) TR kartını uygulamalar.html ve index.html içindeki "grid grid-3" bloğuna yapıştırın.
+  2) EN kartını en/apps.html ve en/index.html içindeki "grid grid-3" bloğuna yapıştırın.
+  3) İlk gerçek uygulamayı eklediğinizde "Yeni uygulamalar / Yakında" kartını silebilirsiniz.
+  Not: Ana sayfadaki (index.html) linklerde "../" OLMAZ; aşağıdaki linkler kök dizindeki sayfalar içindir.
+-->
+
+<!-- ===== TR KART ===== -->
+<article class="card app-card">
+  <div class="app-head"><svg class="app-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="16" fill="#c2410c"/><text x="32" y="43" text-anchor="middle" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#fff">{{APP_LETTER}}</text></svg><div><h3>{{APP_NAME}}</h3><span class="badge badge-live">Google Play'de</span></div></div>
+  <p>{{APP_SHORT_TR}}</p>
+  <div class="btn-row">
+    <a class="btn btn-ghost" href="uygulamalar/{{APP_SLUG}}/index.html">Detaylar</a>
+    <a class="btn btn-play" href="{{PLAY_URL}}" target="_blank" rel="noopener"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5v17a1 1 0 0 0 1.5.9l14-8.5a1 1 0 0 0 0-1.8l-14-8.5A1 1 0 0 0 5 3.5z"/></svg><span><small>Google Play'den</small>İndir</span></a>
+  </div>
+</article>
+<!-- Yayında değilse rozet:  <span class="badge badge-soon">Yakında</span>  ve Google Play butonunu silin. -->
+
+<!-- ===== EN KART (en/apps.html ve en/index.html için — linkler "apps/..." ile başlar) ===== -->
+<article class="card app-card">
+  <div class="app-head"><svg class="app-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="16" fill="#c2410c"/><text x="32" y="43" text-anchor="middle" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#fff">{{APP_LETTER}}</text></svg><div><h3>{{APP_NAME}}</h3><span class="badge badge-live">On Google Play</span></div></div>
+  <p>{{APP_SHORT_EN}}</p>
+  <div class="btn-row">
+    <a class="btn btn-ghost" href="apps/{{APP_SLUG}}/index.html">Details</a>
+    <a class="btn btn-play" href="{{PLAY_URL}}" target="_blank" rel="noopener"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3.5v17a1 1 0 0 0 1.5.9l14-8.5a1 1 0 0 0 0-1.8l-14-8.5A1 1 0 0 0 5 3.5z"/></svg><span><small>Get it on</small>Google Play</span></a>
+  </div>
+</article>
+<!-- Not yet published badge:  <span class="badge badge-soon">Coming soon</span>  and remove the Google Play button. -->

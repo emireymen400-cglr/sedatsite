@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /uygulamalar/_sablon/
+Disallow: /en/apps/_template/
+
+Sitemap: https://sedatcaglar.online/sitemap.xml
